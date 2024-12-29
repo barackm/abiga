@@ -1,100 +1,97 @@
+import { Metadata } from "next";
 import Image from "next/image";
+import React from "react";
+
+export const metadata: Metadata = {
+  title: "In Memoriam - Abigaël Mapendo Buyana",
+  description: "Programme des obsèques d'Abigaël Mapendo Buyana (22 Février 2009 - 27 Décembre 2024)",
+  openGraph: {
+    title: "In Memoriam - Abigaël Mapendo Buyana",
+    description: "Programme des obsèques d'Abigaël Mapendo Buyana",
+    images: ["/funeral-photo.jpg"],
+    type: "website",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className='min-h-screen bg-gradient-to-b from-gray-50 to-white text-gray-800'>
+      <header className='bg-gradient-to-r from-gray-900 to-gray-800 text-white py-12'>
+        <div className='container mx-auto px-4 text-center'>
+          <h1 className='font-serif text-5xl font-light tracking-wider mb-3'>À la Mémoire</h1>
+          <p className='text-xl font-light tracking-wide text-gray-300'>Programme des Obsèques</p>
         </div>
+      </header>
+
+      <main className='container mx-auto px-4 py-12 max-w-3xl'>
+        <section className='text-center mb-16'>
+          <div className='relative w-[400px] h-[400px] mx-auto mb-8'>
+            <div
+              className='absolute inset-0 bg-contain bg-center bg-no-repeat'
+              style={{ backgroundImage: "url(/photo-frame.png)" }}
+            >
+              <div className='absolute inset-[12%] rounded-full overflow-hidden'>
+                <Image
+                  src='/abiga.jpg'
+                  alt='Abigaël Mapendo Buyana'
+                  fill
+                  className='object-cover'
+                  priority
+                  sizes='400px'
+                />
+              </div>
+            </div>
+          </div>
+          <h2 className='font-serif text-4xl font-light mb-3'>Abigaël Mapendo Buyana</h2>
+          <p className='text-gray-600 text-lg font-light tracking-wider'>22 Février 2009 - 27 Décembre 2024</p>
+        </section>
+
+        <section className='bg-white rounded-xl shadow-sm border border-gray-100 p-8 mb-16'>
+          <h3 className='font-serif text-2xl text-center mb-8 text-gray-800'>Programme des Cérémonies</h3>
+          <div className='space-y-8'>
+            <div className='border-l-4 border-gray-200 pl-6'>
+              <h4 className='font-semibold text-lg mb-2'>Du vendredi 27 au dimanche 29 décembre 2024</h4>
+              <p className='text-gray-600 leading-relaxed'>
+                Recueillement au domicile familial
+                <br />
+                <span className='text-sm'>
+                  Entrée Président, N°36, av. Bikukwe, Q. Katoyi,
+                  <br />
+                  commune de Karisimbi. réf. église CECA 20 Shaba
+                </span>
+              </p>
+            </div>
+
+            <div className='border-l-4 border-gray-200 pl-6'>
+              <h4 className='font-semibold text-lg mb-2'>Lundi 30 décembre 2024</h4>
+              <p className='text-gray-600'>À partir de 18h30 : Culte d&apos;actions de grâces et veillée mortuaire</p>
+            </div>
+
+            <div className='border-l-4 border-gray-200 pl-6'>
+              <h4 className='font-semibold text-lg mb-2'>Mardi 31 décembre 2024</h4>
+              <ul className='text-gray-600 space-y-2'>
+                <li>9h00 : Sortie du corps de la morgue de l&apos;hôpital Général</li>
+                <li>9h30 : Départ pour les cimetières de Chemin du Ciel</li>
+                <li>10h30 : Enterrement et témoignage aux cimetières</li>
+                <li>11h30 : Retour au domicile familial</li>
+                <li>12h30 : Bain de consolation et levée de deuil</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className='text-center max-w-2xl mx-auto mb-16'>
+          <blockquote className='font-serif text-xl text-gray-600 italic leading-relaxed'>
+            &ldquo;Ta lumière et ton impact resteront gravés dans nos mémoires.
+            <br />
+            Que ton âme repose en paix éternellement.&rdquo;
+          </blockquote>
+          <p className='mt-6 text-gray-700 font-light'>Signé la famille Paul Buyana</p>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      <footer className='bg-gray-900 text-gray-400 py-8 text-center'>
+        <p className='text-sm'>&copy; 2024 - En mémoire d&apos;Abigaël Mapendo Buyana</p>
       </footer>
     </div>
   );
