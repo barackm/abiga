@@ -25,22 +25,27 @@ export default function Home() {
 
       <main className='container mx-auto px-4 py-12 max-w-3xl'>
         <section className='text-center mb-16'>
-          <div className='relative w-[400px] h-[400px] mx-auto mb-8'>
-            <div
-              className='absolute inset-0 bg-contain bg-center bg-no-repeat'
-              style={{ backgroundImage: "url(/photo-frame.png)" }}
-            >
-              <div className='absolute inset-[12%] rounded-full overflow-hidden'>
-                <Image
-                  src='/abiga.jpg'
-                  alt='Abigaël Mapendo Buyana'
-                  fill
-                  className='object-cover'
-                  priority
-                  sizes='400px'
-                />
-              </div>
+          <div className='relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] mx-auto mb-8'>
+            {/* Base photo layer */}
+            <div className='absolute inset-[15%] rounded-full overflow-hidden'>
+              <Image
+                src='/abiga.jpg'
+                alt='Abigaël Mapendo Buyana'
+                fill
+                className='object-cover'
+                priority
+                sizes='(max-width: 640px) 280px, (max-width: 1024px) 400px, 500px'
+              />
             </div>
+            {/* Frame overlay */}
+            <Image
+              src='/photo-frame.png'
+              alt='Photo Frame'
+              fill
+              className='absolute inset-0 z-10'
+              priority
+              sizes='(max-width: 640px) 280px, (max-width: 1024px) 400px, 500px'
+            />
           </div>
           <h2 className='font-serif text-4xl font-light mb-3'>Abigaël Mapendo Buyana</h2>
           <p className='text-gray-600 text-lg font-light tracking-wider'>22 Février 2009 - 27 Décembre 2024</p>
