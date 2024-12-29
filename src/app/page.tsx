@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import React from "react";
+import Header from "@/components/Header";
+import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "In Memoriam - Abigaël Mapendo Buyana",
@@ -16,21 +18,10 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className='min-h-screen bg-gradient-to-b from-gray-50 to-white text-gray-800'>
-      <header className='relative bg-gray-900 text-white py-10'>
-        <div
-          className='absolute inset-0 bg-[url("/subtle-pattern.png")] opacity-10'
-          style={{ backgroundSize: "40px 40px" }}
-        />
-        <div className='relative container mx-auto px-4 text-center'>
-          <p className='text-gray-400 font-serif mb-2 tracking-widest text-sm'>In Memoriam</p>
-          <h1 className='font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-wide mb-3'>À la Mémoire</h1>
-          <div className='w-16 h-[1px] bg-gradient-to-r from-transparent via-gray-500 to-transparent mx-auto mb-3' />
-          <p className='text-base sm:text-lg font-light tracking-wide text-gray-300'>Programme des Obsèques</p>
-        </div>
-      </header>
-
+      <Header />
+      <Navigation />
       <main className='container mx-auto px-4 py-12 max-w-3xl'>
-        <section className='text-center mb-16'>
+        <section className='text-center mb-16' data-aos='fade-up'>
           <div className='relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] mx-auto mb-8'>
             {/* Base photo layer */}
             <div className='absolute inset-[15%] rounded-full overflow-hidden'>
@@ -53,14 +44,18 @@ export default function Home() {
               sizes='(max-width: 640px) 280px, (max-width: 1024px) 400px, 500px'
             />
           </div>
-          <h2 className='font-serif text-4xl font-light mb-3'>Abigaël Mapendo Buyana</h2>
-          <p className='text-gray-600 text-lg font-light tracking-wider'>22 Février 2009 - 27 Décembre 2024</p>
+          <h2 className='font-serif text-4xl font-light mb-3' data-aos='fade-up' data-aos-delay='200'>
+            Abigaël Mapendo Buyana
+          </h2>
+          <p className='text-gray-600 text-lg font-light tracking-wider' data-aos='fade-up' data-aos-delay='400'>
+            22 Février 2009 - 27 Décembre 2024
+          </p>
         </section>
 
-        <section className='bg-white rounded-xl shadow-sm border border-gray-100 p-8 mb-16'>
+        <section className='bg-white rounded-xl shadow-sm border border-gray-100 p-8 mb-16' data-aos='fade-up'>
           <h3 className='font-serif text-2xl text-center mb-8 text-gray-800'>Programme des Cérémonies</h3>
           <div className='space-y-8'>
-            <div className='border-l-4 border-gray-200 pl-6'>
+            <div className='border-l-4 border-gray-200 pl-6' data-aos='fade-left' data-aos-delay='200'>
               <h4 className='font-semibold text-lg mb-2'>Du vendredi 27 au dimanche 29 décembre 2024</h4>
               <p className='text-gray-600 leading-relaxed'>
                 Recueillement au domicile familial
@@ -73,12 +68,12 @@ export default function Home() {
               </p>
             </div>
 
-            <div className='border-l-4 border-gray-200 pl-6'>
+            <div className='border-l-4 border-gray-200 pl-6' data-aos='fade-left' data-aos-delay='400'>
               <h4 className='font-semibold text-lg mb-2'>Lundi 30 décembre 2024</h4>
               <p className='text-gray-600'>À partir de 18h30 : Culte d&apos;actions de grâces et veillée mortuaire</p>
             </div>
 
-            <div className='border-l-4 border-gray-200 pl-6'>
+            <div className='border-l-4 border-gray-200 pl-6' data-aos='fade-left' data-aos-delay='600'>
               <h4 className='font-semibold text-lg mb-2'>Mardi 31 décembre 2024</h4>
               <ul className='text-gray-600 space-y-2'>
                 <li>9h00 : Sortie du corps de la morgue de l&apos;hôpital Général</li>
@@ -91,7 +86,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className='text-center max-w-2xl mx-auto mb-16'>
+        <section className='text-center max-w-2xl mx-auto mb-16' data-aos='fade-up'>
           <blockquote className='font-serif text-xl text-gray-600 italic leading-relaxed'>
             &ldquo;Ta lumière et ton impact resteront gravés dans nos mémoires.
             <br />
