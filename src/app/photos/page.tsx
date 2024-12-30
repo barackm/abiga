@@ -28,7 +28,18 @@ const MediaItem: React.FC<MediaItemProps> = ({ photo, index, onPhotoClick }) => 
       onClick={() => onPhotoClick(index)}
     >
       {photo.is_video ? (
-        <video src={photo.src} className='w-full aspect-video' controls />
+        <div className='relative w-full pt-[75%]'>
+          {" "}
+          {/* 4:3 aspect ratio container */}
+          <video src={photo.src} className='absolute top-0 left-0 w-full h-full object-cover' preload='metadata' />
+          <div className='absolute inset-0 bg-black/10 flex items-center justify-center'>
+            <div className='w-12 h-12 rounded-full bg-white/80 flex items-center justify-center'>
+              <svg className='w-6 h-6 text-gray-800' fill='currentColor' viewBox='0 0 24 24'>
+                <path d='M8 5v14l11-7z' />
+              </svg>
+            </div>
+          </div>
+        </div>
       ) : (
         <Image
           src={photo.src}
