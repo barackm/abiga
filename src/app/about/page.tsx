@@ -41,7 +41,7 @@ const AboutPage = () => {
 
       <section className='mb-16' data-aos='fade-up'>
         <h2 className='font-serif text-3xl text-center mb-8'>Moments Précieux</h2>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-1'>
           {[
             "https://vmzndvyzclcpgzozziex.supabase.co/storage/v1/object/public/abiga/471780943_1075563971250575_7018799193028159953_n.jpg",
             "https://vmzndvyzclcpgzozziex.supabase.co/storage/v1/object/public/abiga/tontonbob%20%20IMG_2126.jpg",
@@ -49,7 +49,7 @@ const AboutPage = () => {
           ].map((image, i) => (
             <div
               key={i}
-              className='relative h-[200px] rounded-lg overflow-hidden shadow-lg'
+              className='relative w-full pb-[75%] rounded-lg overflow-hidden shadow-lg'
               data-aos='zoom-in'
               data-aos-delay={i * 100}
             >
