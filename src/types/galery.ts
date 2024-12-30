@@ -4,4 +4,6 @@ export interface Galery {
   alt: string;
   title: string;
   created_at: string;
+  is_video: boolean;
+  order: number;
 }
