@@ -33,7 +33,7 @@ const AboutPage = () => {
               <span className="font-semibold">27 décembre 2024</span>.
             </p>
             <p className="text-gray-700 mb-4">
-              Dont le père s'appelle <span className="font-semibold">PAUL BUYANA</span> et maman{" "}
+              Dont le père s&apos;appelle <span className="font-semibold">PAUL BUYANA</span> et maman{" "}
               <span className="font-semibold">SOLANGE KAGENYI</span>.
             </p>
             <h3 className="text-xl font-semibold text-gray-800 mt-6 mb-2">Famille</h3>
@@ -45,7 +45,7 @@ const AboutPage = () => {
                 <span className="font-medium">2011-2012:</span> Études maternelles au COMPLEXE SCOLAIRE LA JOIE.
               </li>
               <li>
-                <span className="font-medium">2013-2019:</span> Certificat d’études primaires au COMPLEXE SCOLAIRE LA
+                <span className="font-medium">2013-2019:</span> Certificat d&apos;études primaires au COMPLEXE SCOLAIRE LA
                 JOIE.
               </li>
               <li>
