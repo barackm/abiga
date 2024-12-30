@@ -35,11 +35,11 @@ export default function PhotosPage() {
         Galerie Photos
       </h2>
 
-      <div className='columns-1 md:columns-2 lg:columns-3 gap-2 mx-auto'>
+      <div className='columns-1 md:columns-2 lg:columns-3 gap-1 mx-auto'>
         {photos.map((photo, i) => (
           <div
             key={photo.id}
-            className='relative mb-4 break-inside-avoid cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300'
+            className='relative mb-1 break-inside-avoid cursor-pointer rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300'
             data-aos='fade-up'
             data-aos-delay={i * 100}
             onClick={() => setIndex(i)}
