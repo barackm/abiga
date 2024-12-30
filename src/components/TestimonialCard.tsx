@@ -3,7 +3,7 @@ import { Testimonial } from "@/data/testimonials";
 
 export default function TestimonialCard({ text, author, relation, image }: Testimonial) {
   return (
-    <div className='bg-white rounded-xl shadow-md p-8 px-1 pt-1 hover:shadow-lg transition-shadow border border-gray-100'>
+    <div className='bg-white rounded-xl shadow-md p-8 px-1 pt-1 hover:shadow-lg transition-shadow border border-gray-100 h-fit'>
       <div className='flex flex-col items-center text-center mb-6'>
         <div className='relative w-full h-52 mb-4'>
           <div className='absolute inset-0 overflow-hidden border border-gray-200 rounded-lg'>
