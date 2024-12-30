@@ -9,9 +9,11 @@ export default async function TributesPage() {
   return (
     <div>
       <h2 className='text-3xl font-serif text-center text-gray-800 mb-12'>Témoignages</h2>
-      <div className='max-w-5xl mx-auto grid gap-8 md:grid-cols-2'>
+      <div className='max-w-5xl mx-auto columns-1 md:columns-2 gap-4'>
         {sortedTestimonials?.map((testimonial) => (
-          <TestimonialCard key={testimonial.id} {...testimonial} />
+          <div key={testimonial.id} className='mb-4 break-inside-avoid'>
+            <TestimonialCard {...testimonial} />
+          </div>
         ))}
       </div>
     </div>
