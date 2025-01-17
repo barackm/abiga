@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/:path*", // Matches all routes
-      "destination": "https://abigael.life/:path*", // Redirects to the new domain
+      "destination": "https://www.abigael.life/:path*", // Redirects to the new domain
       "permanent": true // Indicates a 308 permanent redirect
     }
   ]
