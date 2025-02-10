@@ -1,36 +1,70 @@
 'use client';
 
+import VideoModal from '@/components/VideoPlayer';
 import Image from 'next/image';
+import { Typewriter } from 'react-simple-typewriter';
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full h-screen bg-[url('/new/bg.png')] bg-cover bg-center flex items-center justify-center px-10">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-10">
+    <section className="relative py-28 w-full h-screen bg-[url('/new/bg.png')] bg-cover bg-center flex md:items-center md:justify-center px-4 md:px-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 md:items-center gap-2">
         {/* Left Content */}
         <div className="text-white">
-          <h4 className="text-green-400 uppercase tracking-wide text-sm">Creative Agency</h4>
-          <h1 className="text-5xl md:text-6xl font-extrabold mt-4">
-            We Are <span className="text-green-400">Creative</span> <br /> Design Agency
+          <h4 className="text-[#93C7F3] uppercase tracking-wide text-sm">Abigaël Mapendo Buyana</h4>
+          <h1 className="text-5xl md:min-h-[180px] min-h-[200px] md:text-6xl font-extrabold mt-4">
+          <Typewriter
+             
+             words={['We loved you']}
+             loop={true}
+                      cursor
+              cursorStyle='_'
+              typeSpeed={100}
+              deleteSpeed={50}
+              delaySpeed={8000}
+             />
+
+             
+<span className="text-[#93C7F3]">
+             <Typewriter
+             
+             words={['Abby']}
+             cursor
+             cursorStyle='_'
+             typeSpeed={100}
+             deleteSpeed={50}
+             delaySpeed={20000}
+             loop={true}
+             />
+</span> 
+             
+            
+            <br />   <Typewriter
+             
+             words={['But God loved you more'
+             ]}   
+             loop={true}
+             cursor
+              cursorStyle='_'
+              typeSpeed={100}
+              deleteSpeed={50}
+    
+             />.
           </h1>
           
-          <p className="text-gray-400 mt-4">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-            facilisis quam eget ex blandit cursus. Proin est magna, semper a
-            porta sed, lacinia eu lectus.
+          <p className="text-gray-400 mt-4 max-w-[70%] md:max-w-[100%]">
+          Ta lumière et ton impact resteront gravés dans nos mémoires. Que ton âme repose en paix éternellement.
           </p>
           <div className="mt-6 flex items-center gap-4">
-            <button className="w-14 h-14 flex items-center justify-center rounded-full bg-green-400 text-black text-2xl font-bold shadow-lg hover:bg-green-300 transition">
-              ▶
-            </button>
+            <VideoModal videoUrl="/videos/zoe.mp4" />
             <div>
-              <p className="text-sm uppercase text-gray-400">About Us</p>
-              <p className="text-green-400 font-semibold">Promotion Studio</p>
+              <p className="text-sm uppercase text-gray-400">Her vision</p>
+              <p className="text-[#93C7F3] font-semibold">CEO of ZOE</p>
             </div>
           </div>
         </div>
         
         {/* Right Image */}
-        <div className="relative">
+        <div className="absolute bottom-[10px] right-[-130px] md:relative">
           <Image
             src="/new/last.png" // Update this with the correct path
             alt="Creative Model"
@@ -47,12 +81,12 @@ export default function HeroSection() {
             height={350}
             className="rounded-lg shadow-lg  "
           /> */}
-          <div className='absolute top-[0] left-[0%] right-0 rounded-lg shadow-lg w-[max-content] h-[max-content]'>
-            <span className='text-[300px] text-black font-extrabold'
+          <div className='absolute md:top-[0] top-[10px] md:left-[0%] md:right-0 right-[85%] rounded-lg shadow-lg w-[max-content] h-[max-content]'>
+            <span className='text-[300px] text-[#1f4261]  font-extrabold'
             >1</span> 
-            <div className='absolute top-[90px] left-[100px] text-[260px] text-black font-extrabold right-0 rounded-lg shadow-lg w-[max-content] h-[max-content]'>5
-              <div className='absolute top-[47%] bg-white text-right p-2 w-[150px] left-[110px] z-[-1] text-[40px] text-black font-extrabold right-0 rounded-lg shadow-lg w-[max-content] h-[max-content] leading-none
-'><div>Years</div> <div>Lived</div></div>
+            <div className='absolute top-[90px] left-[100px] text-[260px] text-[#1f4261] font-extrabold right-0 rounded-lg shadow-lg w-[max-content] h-[max-content]'>5
+              <div className='absolute top-[47%] bg-[#93C7F3] text-right p-2 w-[160px] left-[110px] z-[-1] text-[40px] text-black font-extrabold right-0 rounded-lg shadow-lg w-[max-content] h-[max-content] leading-none
+'><div>Years</div> <div>Lived.</div></div>
             </div>
             
           </div>
@@ -60,6 +94,7 @@ export default function HeroSection() {
           
         </div>
       </div>
+  
     </section>
   );
 }

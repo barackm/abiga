@@ -33,12 +33,12 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className='min-h-screen bg-gradient-to-b from-gray-50 to-white text-gray-800 flex flex-col overflow-x-hidden'>
           <Header />
-          <Navigation />
-          <main className='container flex-1 mx-auto px-4 py-12 max-w-3xl'>{children}</main>
+          {/* <Navigation /> */}
+          <main className='w-full'>
+            {children}
+          </main>
           <Footer />
-        </div>
       </body>
     </html>
   );

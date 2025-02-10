@@ -1,72 +1,51 @@
-"use client";
+'use client';
 
-import React from "react";
-import { usePathname } from "next/navigation";
+import { useState } from 'react';
+import Link from 'next/link';
+import { Menu } from 'lucide-react';
+import Image from 'next/image';
 
-export default function Header() {
-  const pathname = usePathname();
-
-  const getHeaderContent = () => {
-    switch (pathname) {
-      case "/about":
-        return {
-          subtitle: "Biographie",
-          title: "Son Histoire",
-          description: "Un parcours de vie inspirant",
-        };
-      case "/photos":
-        return {
-          subtitle: "Souvenirs",
-          title: "Moments Précieux",
-          description: "Une collection de moments inoubliables",
-        };
-      case "/tributes":
-        return {
-          subtitle: "Hommages",
-          title: "Messages",
-          description: "Témoignages et messages de sympathie",
-        };
-      default:
-        return {
-          subtitle: "In Memoriam",
-          title: "À la Mémoire",
-          description: "Programme des Obsèques",
-        };
-    }
-  };
-
-  const content = getHeaderContent();
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className='relative bg-gray-900 text-white py-10'>
-      <div
-        className='absolute inset-0 bg-[url("/subtle-pattern.png")] opacity-10'
-        style={{ backgroundSize: "40px 40px" }}
-      />
-      <div className='relative container mx-auto px-4 text-center'>
-        <p className='text-gray-400 font-serif mb-2 tracking-widest text-sm' data-aos='fade-down'>
-          {content.subtitle}
-        </p>
-        <h1
-          className='font-serif text-3xl sm:text-4xl md:text-5xl font-light tracking-wide mb-3'
-          data-aos='fade-up'
-          data-aos-delay='100'
+    <nav className="bg-black text-white p-4 shadow-md fixed top-0 left-0 w-full z-50">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-2xl font-bold text-teal-400">
+         <Image src="/new/log02.jpeg" width={200} height={300} alt="Logo" />
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-6">
+          <li><Link href="/" className="hover:text-teal-400">Home</Link></li>
+          <li><Link href="/about" className="hover:text-teal-400">About Us</Link></li>
+          <li><Link href="/services" className="hover:text-teal-400">Services</Link></li>
+          <li><Link href="/portfolio" className="hover:text-teal-400">Portfolio</Link></li>
+          <li><Link href="/pages" className="hover:text-teal-400">Pages</Link></li>
+          <li><Link href="/contact" className="hover:text-teal-400">Contact Us</Link></li>
+        </ul>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="md:hidden text-white" 
+          onClick={() => setIsOpen(!isOpen)}
         >
-          {content.title}
-        </h1>
-        <div
-          className='w-16 h-[1px] bg-gradient-to-r from-transparent via-gray-500 to-transparent mx-auto mb-3'
-          data-aos='fade-up'
-          data-aos-delay='200'
-        />
-        <p
-          className='text-base sm:text-lg font-light tracking-wide text-gray-300'
-          data-aos='fade-up'
-          data-aos-delay='300'
-        >
-          {content.description}
-        </p>
+          <Menu size={28} />
+        </button>
       </div>
-    </header>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <ul className="md:hidden bg-black text-white p-4 space-y-4 text-center">
+          <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+          <li><Link href="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
+          <li><Link href="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
+          <li><Link href="/portfolio" onClick={() => setIsOpen(false)}>Portfolio</Link></li>
+          <li><Link href="/pages" onClick={() => setIsOpen(false)}>Pages</Link></li>
+          <li><Link href="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
+        </ul>
+      )}
+    </nav>
   );
 }
