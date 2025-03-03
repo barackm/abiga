@@ -7,6 +7,24 @@ import AOS from "aos";
 import Header from "@/components/Header";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ContactPage from "@/components/contact";
+import { Poppins } from "next/font/google";
+
+import { Roboto } from "next/font/google";
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"], // Adjust as needed
+});
+
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], // Choose the weights you need
+});
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,14 +50,15 @@ export default function RootLayout({
 
   return (
     <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${roboto.variable} antialiased`}>
           <Header />
           {/* <Navigation /> */}
-          <main className='w-full'>
+          <main className='w-full flex flex-col font-sans justify-center'>
             {children}
           </main>
+          <ContactPage />
           <Footer />
       </body>
-    </html>
+    </html> 
   );
 }

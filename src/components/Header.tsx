@@ -9,21 +9,21 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-black text-white p-4 shadow-md fixed top-0 left-0 w-full z-50">
+    <nav className="bg-black p-4 shadow-md fixed top-0 left-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-teal-400">
+        <div className="text-2xl font-bold text-teal-400"   data-aos='zoom-in'>
          <Image src="/new/log02.jpeg" width={200} height={300} alt="Logo" />
         </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6">
-          <li><Link href="/" className="hover:text-teal-400">Home</Link></li>
-          <li><Link href="/about" className="hover:text-teal-400">About Us</Link></li>
-          <li><Link href="/services" className="hover:text-teal-400">Services</Link></li>
-          <li><Link href="/portfolio" className="hover:text-teal-400">Portfolio</Link></li>
-          <li><Link href="/pages" className="hover:text-teal-400">Pages</Link></li>
-          <li><Link href="/contact" className="hover:text-teal-400">Contact Us</Link></li>
+        <ul className="hidden md:flex space-x-6 font-thin"   data-aos='fade-up'>
+          <li><Link href="/" className="hover:text-teal-400 text-[#93C7F3]">Home</Link></li>
+          <li><Link href="/biography" className="hover:text-teal-400">Biography</Link></li>
+          <li><Link href="/family" className="hover:text-teal-400">Family</Link></li>
+          <li><Link href="/moments" className="hover:text-teal-400">Moments</Link></li>
+          <li><Link href="/ejo" className="hover:text-teal-400">Ejo</Link></li>
+          <li><Link href="/testimonies" className="hover:text-teal-400">Testimonies</Link></li>
         </ul>
 
         {/* Mobile Menu Button */}
