@@ -1,4 +1,4 @@
-import { FaHeart, FaPen, FaImages, FaHome, FaUsers, FaMusic, FaFlower } from "react-icons/fa";
+import { FaHeart, FaPen, FaImages, FaHome, FaUsers, FaMusic, FaLeaf } from "react-icons/fa";
 
 export const mainNavLinks = [
   {
@@ -28,7 +28,7 @@ export const mainNavLinks = [
   },
   {
     href: "/funeral",
-    icon: FaFlower,
+    icon: FaLeaf,
     label: "Funérailles",
   },
   {
