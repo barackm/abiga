@@ -1,21 +1,16 @@
 "use client";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import Header from "@/components/Header";
-import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { Roboto } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const roboto = Roboto({
+  variable: "--font-roboto",
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "700"],
 });
 
 export default function RootLayout({
@@ -31,15 +26,14 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang='en'>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className='min-h-screen bg-gradient-to-b from-gray-50 to-white text-gray-800 flex flex-col overflow-x-hidden'>
+    <html lang='fr'>
+      <body className={`${roboto.variable} antialiased`}>
           <Header />
-          <Navigation />
-          <main className='container flex-1 mx-auto px-4 py-12 max-w-3xl'>{children}</main>
+          <main className='w-full flex flex-col font-sans justify-center'>
+            {children}
+          </main>
           <Footer />
-        </div>
       </body>
-    </html>
+    </html> 
   );
 }

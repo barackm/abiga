@@ -1,94 +1,98 @@
-import { Metadata } from "next";
-import Image from "next/image";
-import React from "react";
+'use client';
 
-export const metadata: Metadata = {
-  title: "In Memoriam - Abigaël Mapendo Buyana",
-  description: "Programme des obsèques d'Abigaël Mapendo Buyana (22 Février 2009 - 27 Décembre 2024)",
-  openGraph: {
-    title: "In Memoriam - Abigaël Mapendo Buyana",
-    description: "Programme des obsèques d'Abigaël Mapendo Buyana",
-    images: ["/funeral-photo.jpg"],
-    type: "website",
-  },
-};
+import VideoModal from '@/components/VideoPlayer';
+import Image from 'next/image';
+import { Typewriter } from 'react-simple-typewriter';
 
-export default function Home() {
-  return (
-    <div>
-      <section className='text-center mb-16' data-aos='fade-up'>
-        <div className='relative w-[280px] h-[280px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px] mx-auto mb-8'>
-          {/* Base photo layer */}
-          <div className='absolute inset-[15%] rounded-full overflow-hidden'>
-            <Image
-              src='/abiga.jpg'
-              alt='Abigaël Mapendo Buyana'
-              fill
-              className='object-cover'
-              priority
-              sizes='(max-width: 640px) 280px, (max-width: 1024px) 400px, 500px'
-            />
-          </div>
-          {/* Frame overlay */}
-          <Image
-            src='/photo-frame.png'
-            alt='Photo Frame'
-            fill
-            className='absolute inset-0 z-10'
-            priority
-            sizes='(max-width: 640px) 280px, (max-width: 1024px) 400px, 500px'
-          />
-        </div>
-        <h2 className='font-serif text-4xl font-light mb-3' data-aos='fade-up' data-aos-delay='200'>
-          Abigaël Mapendo Buyana
-        </h2>
-        <p className='text-gray-600 text-lg font-light tracking-wider' data-aos='fade-up' data-aos-delay='400'>
-          22 Février 2009 - 27 Décembre 2024
-        </p>
-      </section>
+export default function HeroSection() {
+	return (
+		<section className="relative py-28 w-full h-screen bg-[url('/new/bg.png')] bg-cover bg-center flex md:items-center md:justify-center px-4 md:px-10">
+			<div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 md:items-center gap-2'>
+				{/* Left Content */}
+				<div className='text-white'>
+					<h4 className='text-[#93C7F3] uppercase tracking-wide text-sm'>
+						Abigaël Mapendo Buyana
+					</h4>
+					<h1 className='text-5xl md:min-h-[180px] min-h-[200px] md:text-6xl font-extrabold mt-4' data-aos='fade-up'>
+						<Typewriter
+							words={['Nous t\'avons aimée']}
+							loop={true}
+							cursor
+							cursorStyle='_'
+							typeSpeed={100}
+							deleteSpeed={50}
+							delaySpeed={8000}
+						/>
+						<span className='text-[#93C7F3]'>
+							<Typewriter
+								words={['Abby']}
+								cursor
+								cursorStyle='_'
+								typeSpeed={100}
+								deleteSpeed={50}
+								delaySpeed={20000}
+								loop={true}
+							/>
+						</span>
+						<br />{' '}
+						<Typewriter
+							words={['Mais Dieu t\'a aimée davantage']}
+							loop={true}
+							cursor
+							cursorStyle='_'
+							typeSpeed={100}
+							deleteSpeed={50}
+						/>
+						.
+					</h1>
 
-      <section className='bg-white rounded-xl shadow-sm border border-gray-100 p-8 mb-16' data-aos='fade-up'>
-        <h3 className='font-serif text-2xl text-center mb-8 text-gray-800'>Programme des Cérémonies</h3>
-        <div className='space-y-8'>
-          <div className='border-l-4 border-gray-200 pl-6' data-aos='fade-left' data-aos-delay='200'>
-            <h4 className='font-semibold text-lg mb-2'>Du vendredi 27 au dimanche 29 décembre 2024</h4>
-            <p className='text-gray-600 leading-relaxed'>
-              Recueillement au domicile familial
-              <br />
-              <span className='text-sm'>
-                Entrée Président, N°36, av. Bikukwe, Q. Katoyi,
-                <br />
-                commune de Karisimbi. réf. église CECA 20 Shaba
-              </span>
-            </p>
-          </div>
+					<p className='text-gray-400 mt-4 max-w-[70%] md:max-w-[100%]'>
+						Ta lumière et ton impact resteront gravés dans nos mémoires. Que ton
+						âme repose en paix éternellement.
+					</p>
+					<div className='mt-10 flex items-center gap-4'>
+						<VideoModal videoUrl='https://www.youtube.com/shorts/U6Bm4YavHzE' />
+						<div>
+							<p className='text-sm uppercase text-gray-400'>Sa vision</p>
+							<p className='text-[#93C7F3] font-semibold'>PDG de ZOE</p>
+						</div>
+					</div>
+				</div>
 
-          <div className='border-l-4 border-gray-200 pl-6' data-aos='fade-left' data-aos-delay='400'>
-            <h4 className='font-semibold text-lg mb-2'>Lundi 30 décembre 2024</h4>
-            <p className='text-gray-600'>À partir de 18h30 : Culte d&apos;actions de grâces et veillée mortuaire</p>
-          </div>
-
-          <div className='border-l-4 border-gray-200 pl-6' data-aos='fade-left' data-aos-delay='600'>
-            <h4 className='font-semibold text-lg mb-2'>Mardi 31 décembre 2024</h4>
-            <ul className='text-gray-600 space-y-2'>
-              <li>9h00 : Sortie du corps de la morgue de l&apos;hôpital Général</li>
-              <li>9h30 : Départ pour les cimetières de Chemin du Ciel</li>
-              <li>10h30 : Enterrement et témoignage aux cimetières</li>
-              <li>11h30 : Retour au domicile familial</li>
-              <li>12h30 : Bain de consolation et levée de deuil</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className='text-center max-w-2xl mx-auto mb-16' data-aos='fade-up'>
-        <blockquote className='font-serif text-xl text-gray-600 italic leading-relaxed'>
-          &ldquo;Ta lumière et ton impact resteront gravés dans nos mémoires.
-          <br />
-          Que ton âme repose en paix éternellement.&rdquo;
-        </blockquote>
-        <p className='mt-6 text-gray-700 font-light'>Signé la famille Paul Buyana</p>
-      </section>
-    </div>
-  );
+				{/* Right Image */}
+				<div className='absolute bottom-[10px] right-[-130px] md:relative'>
+					<Image
+						src='/new/last.png'
+						alt='Abigaël Mapendo Buyana'
+						width={350}
+						height={350}
+						className='rounded-lg shadow-lg  object-cover'
+					/>
+					<div className='absolute bottom-[285px] left-0 right-[200px] rounded-lg shadow-lg'>
+						{/* <Image
+            src="/new/x.png"
+            alt="Abigaël Mapendo Buyana"
+            width={350}
+            height={350}
+            className="rounded-lg shadow-lg  "
+          /> */}
+						<div className='absolute md:top-[0] top-[10px] md:left-[0%] md:right-0 right-[85%] rounded-lg shadow-lg w-[max-content] h-[max-content]'>
+							<span className='text-[300px] text-[#1f4261]  font-extrabold'>
+								1
+							</span>
+							<div className='absolute top-[90px] left-[100px] text-[260px] text-[#1f4261] font-extrabold right-0 rounded-lg shadow-lg w-[max-content] h-[max-content]'>
+								5
+								<div
+									className='absolute top-[47%] bg-[#93C7F3] text-right p-2 w-[150px] left-[105px] z-[-1] text-[40px] text-black font-extrabold right-0 rounded-lg shadow-lg w-[max-content] h-[max-content] leading-none
+'
+								>
+									<div>Ans</div> <div>Vécus.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }

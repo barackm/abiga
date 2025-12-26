@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Testimonial } from "@/data/testimonials";
+import type { Testimonial } from "@/types/testimonials";
 
 export default function TestimonialCard({ text, author, relation, image }: Testimonial) {
   return (
