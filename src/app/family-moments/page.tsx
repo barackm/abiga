@@ -114,14 +114,14 @@ const FamilyMomentsPage = () => {
 
         setSlides(slides);
       } catch (error) {
-        console.error("Error fetching photos:", error);
+        console.error("Erreur lors du chargement des photos:", error);
       }
     };
 
     fetchPhotos();
   }, []);
 
-  // Sample family moments data - you can replace this with actual data from your database
+  // Exemples de moments familiaux - vous pouvez remplacer cela par des données réelles de votre base de données
   const familyMoments = [
     {
       title: "Moments en famille",
@@ -234,7 +234,7 @@ const FamilyMomentsPage = () => {
                   />
                 ))
               ) : (
-                // Placeholder images if no photos available
+                // Images de remplacement si aucune photo n'est disponible
                 [...Array(3)].map((_, i) => (
                   <div
                     key={i}

@@ -6,106 +6,106 @@ import Link from "next/link";
 import AOS from "aos";
 
 const AboutPage = () => {
-  // Family members data - Update names and image paths here
+  // Données des membres de la famille - Mettez à jour les noms et les chemins d'images ici
   const familyMembers = {
     parents: [
       {
         name: "PAUL BUYANA",
         relation: "Père",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "SOLANGE KAGENYI",
         relation: "Mère",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
     ],
     sisters: [
       {
-        name: "Sœur 1", // Replace with actual name
+        name: "Sœur 1", // Remplacer par le nom réel
         relation: "Sœur",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Sœur 2", // Replace with actual name
         relation: "Sœur",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Sœur 3", // Replace with actual name
         relation: "Sœur",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
     ],
     brothers: [
       {
-        name: "Frère 1", // Replace with actual name
+        name: "Frère 1", // Remplacer par le nom réel
         relation: "Frère",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Frère 2", // Replace with actual name
         relation: "Frère",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Frère 3", // Replace with actual name
         relation: "Frère",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
     ],
     friends: [
       {
-        name: "Ami(e) 1", // Replace with actual name
+        name: "Ami(e) 1", // Remplacer par le nom réel
         relation: "Ami(e)",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Ami(e) 2", // Replace with actual name
         relation: "Ami(e)",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Ami(e) 3", // Replace with actual name
         relation: "Ami(e)",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Ami(e) 4", // Replace with actual name
         relation: "Ami(e)",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Ami(e) 5", // Replace with actual name
         relation: "Ami(e)",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Ami(e) 6", // Replace with actual name
         relation: "Ami(e)",
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
     ],
     others: [
       {
-        name: "Personne 1", // Replace with actual name (e.g., Tante, Oncle, Cousin(e), etc.)
-        relation: "Relation", // Replace with actual relation
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        name: "Personne 1", // Remplacer par le nom réel (ex: Tante, Oncle, Cousin(e), etc.)
+        relation: "Relation", // Remplacer par la relation réelle
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Personne 2", // Replace with actual name
         relation: "Relation", // Replace with actual relation
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Personne 3", // Replace with actual name
         relation: "Relation", // Replace with actual relation
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
       {
         name: "Personne 4", // Replace with actual name
         relation: "Relation", // Replace with actual relation
-        image: "/placeholder-family.jpg", // Replace with actual image path
+        image: "/placeholder-family.jpg", // Remplacer par le chemin d'image réel
       },
     ],
   };

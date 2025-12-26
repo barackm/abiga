@@ -87,7 +87,7 @@ const FuneralPage = () => {
     const fetchPhotos = async () => {
       try {
         const data = await fetchTGalery();
-        // Filter funeral-related photos (you can customize this based on your data structure)
+        // Filtrer les photos liées aux funérailles (vous pouvez personnaliser cela selon votre structure de données)
         const funeralPhotos = data.filter(photo => 
           photo.title?.toLowerCase().includes('funeral') || 
           photo.title?.toLowerCase().includes('funéraille') ||
@@ -126,14 +126,14 @@ const FuneralPage = () => {
 
         setSlides(slides);
       } catch (error) {
-        console.error("Error fetching photos:", error);
+        console.error("Erreur lors du chargement des photos:", error);
       }
     };
 
     fetchPhotos();
   }, []);
 
-  // Sample funeral day sections - you can customize these
+  // Sections du jour des funérailles - vous pouvez personnaliser ces sections
   const funeralSections = [
     {
       title: "Cérémonie",
@@ -263,7 +263,7 @@ const FuneralPage = () => {
                   />
                 ))
               ) : (
-                // Placeholder images if no photos available
+                // Images de remplacement si aucune photo n'est disponible
                 [...Array(4)].map((_, i) => (
                   <div
                     key={i}

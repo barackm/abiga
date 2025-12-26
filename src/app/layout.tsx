@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import AOS from "aos";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ContactPage from "@/components/contact";
 import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
@@ -27,13 +26,12 @@ export default function RootLayout({
   }, []);
 
   return (
-    <html lang='en'>
+    <html lang='fr'>
       <body className={`${roboto.variable} antialiased`}>
           <Header />
           <main className='w-full flex flex-col font-sans justify-center'>
             {children}
           </main>
-          <ContactPage />
           <Footer />
       </body>
     </html> 

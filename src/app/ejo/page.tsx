@@ -114,14 +114,14 @@ const EJOPage = () => {
 
         setSlides(slides);
       } catch (error) {
-        console.error("Error fetching photos:", error);
+        console.error("Erreur lors du chargement des photos:", error);
       }
     };
 
     fetchPhotos();
   }, []);
 
-  // Filter EJO-related photos (you can customize this based on your data structure)
+  // Filtrer les photos liées à EJO (vous pouvez personnaliser cela selon votre structure de données)
   const ejoPhotos = photos.filter(photo => 
     photo.title?.toLowerCase().includes('ejo') || 
     photo.title?.toLowerCase().includes('effective joy') ||

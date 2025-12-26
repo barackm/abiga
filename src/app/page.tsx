@@ -15,7 +15,7 @@ export default function HeroSection() {
 					</h4>
 					<h1 className='text-5xl md:min-h-[180px] min-h-[200px] md:text-6xl font-extrabold mt-4' data-aos='fade-up'>
 						<Typewriter
-							words={['We loved you']}
+							words={['Nous t\'avons aimée']}
 							loop={true}
 							cursor
 							cursorStyle='_'
@@ -36,7 +36,7 @@ export default function HeroSection() {
 						</span>
 						<br />{' '}
 						<Typewriter
-							words={['But God loved you more']}
+							words={['Mais Dieu t\'a aimée davantage']}
 							loop={true}
 							cursor
 							cursorStyle='_'
@@ -53,8 +53,8 @@ export default function HeroSection() {
 					<div className='mt-10 flex items-center gap-4'>
 						<VideoModal videoUrl='/videos/zoe.mp4' />
 						<div>
-							<p className='text-sm uppercase text-gray-400'>Her vision</p>
-							<p className='text-[#93C7F3] font-semibold'>CEO of ZOE</p>
+							<p className='text-sm uppercase text-gray-400'>Sa vision</p>
+							<p className='text-[#93C7F3] font-semibold'>PDG de ZOE</p>
 						</div>
 					</div>
 				</div>
@@ -62,16 +62,16 @@ export default function HeroSection() {
 				{/* Right Image */}
 				<div className='absolute bottom-[10px] right-[-130px] md:relative'>
 					<Image
-						src='/new/last.png' // Update this with the correct path
-						alt='Creative Model'
+						src='/new/last.png'
+						alt='Abigaël Mapendo Buyana'
 						width={350}
 						height={350}
 						className='rounded-lg shadow-lg  object-cover'
 					/>
 					<div className='absolute bottom-[285px] left-0 right-[200px] rounded-lg shadow-lg'>
 						{/* <Image
-            src="/new/x.png" // Update this with the correct path
-            alt="Creative Model"
+            src="/new/x.png"
+            alt="Abigaël Mapendo Buyana"
             width={350}
             height={350}
             className="rounded-lg shadow-lg  "
@@ -86,7 +86,7 @@ export default function HeroSection() {
 									className='absolute top-[47%] bg-[#93C7F3] text-right p-2 w-[150px] left-[105px] z-[-1] text-[40px] text-black font-extrabold right-0 rounded-lg shadow-lg w-[max-content] h-[max-content] leading-none
 '
 								>
-									<div>Years</div> <div>Lived.</div>
+									<div>Ans</div> <div>Vécus.</div>
 								</div>
 							</div>
 						</div>

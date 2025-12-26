@@ -18,13 +18,12 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 font-thin"   data-aos='fade-up'>
-          <li><Link href="/" className="hover:text-teal-400 text-[#93C7F3]">Home</Link></li>
-          <li><Link href="/biography" className="hover:text-teal-400">Biography</Link></li>
-          <li><Link href="/about" className="hover:text-teal-400">About</Link></li>
-          <li><Link href="/family-moments" className="hover:text-teal-400">Family Moments</Link></li>
+          <li><Link href="/" className="hover:text-teal-400 text-[#93C7F3]">Accueil</Link></li>
+          <li><Link href="/about" className="hover:text-teal-400">Biographie</Link></li>
+          <li><Link href="/family-moments" className="hover:text-teal-400">Moments en Famille</Link></li>
           <li><Link href="/ejo" className="hover:text-teal-400">EJO</Link></li>
-          <li><Link href="/tributes" className="hover:text-teal-400">Tributes</Link></li>
-          <li><Link href="/funeral" className="hover:text-teal-400">Funeral</Link></li>
+          <li><Link href="/tributes" className="hover:text-teal-400">Témoignages</Link></li>
+          <li><Link href="/funeral" className="hover:text-teal-400">Funérailles</Link></li>
           <li><Link href="/photos" className="hover:text-teal-400">Photos</Link></li>
         </ul>
 
@@ -40,12 +39,12 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <ul className="md:hidden bg-black text-white p-4 space-y-4 text-center">
-          <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
-          <li><Link href="/family-moments" onClick={() => setIsOpen(false)}>Family Moments</Link></li>
+          <li><Link href="/" onClick={() => setIsOpen(false)}>Accueil</Link></li>
+          <li><Link href="/about" onClick={() => setIsOpen(false)}>Biographie</Link></li>
+          <li><Link href="/family-moments" onClick={() => setIsOpen(false)}>Moments en Famille</Link></li>
           <li><Link href="/ejo" onClick={() => setIsOpen(false)}>EJO</Link></li>
-          <li><Link href="/tributes" onClick={() => setIsOpen(false)}>Tributes</Link></li>
-          <li><Link href="/funeral" onClick={() => setIsOpen(false)}>Funeral</Link></li>
+          <li><Link href="/tributes" onClick={() => setIsOpen(false)}>Témoignages</Link></li>
+          <li><Link href="/funeral" onClick={() => setIsOpen(false)}>Funérailles</Link></li>
           <li><Link href="/photos" onClick={() => setIsOpen(false)}>Photos</Link></li>
         </ul>
       )}

@@ -17,11 +17,11 @@ export default function TributesPage() {
       const data = await fetchTestimonials();
       const sortedData = data?.sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
       setTestimonials(sortedData || []);
-    } catch (error) {
-      console.error("Error loading testimonials:", error);
-    } finally {
-      setLoading(false);
-    }
+      } catch (error) {
+        console.error("Erreur lors du chargement des témoignages:", error);
+      } finally {
+        setLoading(false);
+      }
   };
 
   useEffect(() => {
