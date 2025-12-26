@@ -1,4 +1,4 @@
-import { FaHeart, FaPen, FaImages, FaHome } from "react-icons/fa";
+import { FaHeart, FaPen, FaImages, FaHome, FaUsers } from "react-icons/fa";
 
 export const mainNavLinks = [
   {
@@ -10,6 +10,11 @@ export const mainNavLinks = [
     href: "/about",
     icon: FaHeart,
     label: "Biographie",
+  },
+  {
+    href: "/family-moments",
+    icon: FaUsers,
+    label: "Moments en Famille",
   },
   {
     href: "/tributes",

@@ -20,10 +20,10 @@ export default function Navbar() {
         <ul className="hidden md:flex space-x-6 font-thin"   data-aos='fade-up'>
           <li><Link href="/" className="hover:text-teal-400 text-[#93C7F3]">Home</Link></li>
           <li><Link href="/biography" className="hover:text-teal-400">Biography</Link></li>
-          <li><Link href="/family" className="hover:text-teal-400">Family</Link></li>
-          <li><Link href="/moments" className="hover:text-teal-400">Moments</Link></li>
-          <li><Link href="/ejo" className="hover:text-teal-400">Ejo</Link></li>
-          <li><Link href="/testimonies" className="hover:text-teal-400">Testimonies</Link></li>
+          <li><Link href="/about" className="hover:text-teal-400">About</Link></li>
+          <li><Link href="/family-moments" className="hover:text-teal-400">Family Moments</Link></li>
+          <li><Link href="/photos" className="hover:text-teal-400">Photos</Link></li>
+          <li><Link href="/tributes" className="hover:text-teal-400">Tributes</Link></li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -39,11 +39,10 @@ export default function Navbar() {
       {isOpen && (
         <ul className="md:hidden bg-black text-white p-4 space-y-4 text-center">
           <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
-          <li><Link href="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
-          <li><Link href="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
-          <li><Link href="/portfolio" onClick={() => setIsOpen(false)}>Portfolio</Link></li>
-          <li><Link href="/pages" onClick={() => setIsOpen(false)}>Pages</Link></li>
-          <li><Link href="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
+          <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+          <li><Link href="/family-moments" onClick={() => setIsOpen(false)}>Family Moments</Link></li>
+          <li><Link href="/photos" onClick={() => setIsOpen(false)}>Photos</Link></li>
+          <li><Link href="/tributes" onClick={() => setIsOpen(false)}>Tributes</Link></li>
         </ul>
       )}
     </nav>
