@@ -1,11 +1,115 @@
 'use client';
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import AOS from "aos";
 
 const AboutPage = () => {
+  // Family members data - Update names and image paths here
+  const familyMembers = {
+    parents: [
+      {
+        name: "PAUL BUYANA",
+        relation: "Père",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "SOLANGE KAGENYI",
+        relation: "Mère",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+    ],
+    sisters: [
+      {
+        name: "Sœur 1", // Replace with actual name
+        relation: "Sœur",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Sœur 2", // Replace with actual name
+        relation: "Sœur",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Sœur 3", // Replace with actual name
+        relation: "Sœur",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+    ],
+    brothers: [
+      {
+        name: "Frère 1", // Replace with actual name
+        relation: "Frère",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Frère 2", // Replace with actual name
+        relation: "Frère",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Frère 3", // Replace with actual name
+        relation: "Frère",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+    ],
+    friends: [
+      {
+        name: "Ami(e) 1", // Replace with actual name
+        relation: "Ami(e)",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Ami(e) 2", // Replace with actual name
+        relation: "Ami(e)",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Ami(e) 3", // Replace with actual name
+        relation: "Ami(e)",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Ami(e) 4", // Replace with actual name
+        relation: "Ami(e)",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Ami(e) 5", // Replace with actual name
+        relation: "Ami(e)",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Ami(e) 6", // Replace with actual name
+        relation: "Ami(e)",
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+    ],
+    others: [
+      {
+        name: "Personne 1", // Replace with actual name (e.g., Tante, Oncle, Cousin(e), etc.)
+        relation: "Relation", // Replace with actual relation
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Personne 2", // Replace with actual name
+        relation: "Relation", // Replace with actual relation
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Personne 3", // Replace with actual name
+        relation: "Relation", // Replace with actual relation
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+      {
+        name: "Personne 4", // Replace with actual name
+        relation: "Relation", // Replace with actual relation
+        image: "/placeholder-family.jpg", // Replace with actual image path
+      },
+    ],
+  };
+
   useEffect(() => {
     AOS.init({
       duration: 1200,
@@ -175,6 +279,240 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Family Relationship Section */}
+      <section className="relative py-20 w-full bg-[url('/new/bg.png')] bg-cover bg-center px-4 md:px-10">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div
+            data-aos="fade-down"
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ceux qui <span className="text-[#93C7F3]">Comptent</span>
+            </h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              La famille, les amis et tous ceux qui ont partagé sa vie et portent son amour dans leurs cœurs
+            </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#93C7F3] to-transparent mx-auto mt-6 animate-pulse-glow"></div>
+          </div>
+
+          {/* Parents Section */}
+          <div className="mb-20">
+            <h3
+              data-aos="fade-up"
+              className="text-2xl md:text-3xl font-semibold text-[#93C7F3] mb-10 text-center flex items-center justify-center"
+            >
+              <span className="mr-3 text-3xl">👨‍👩</span>
+              Parents
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {familyMembers.parents.map((parent, i) => (
+                <div
+                  key={i}
+                  data-aos={i === 0 ? "fade-right" : "fade-left"}
+                  data-aos-delay={(i + 1) * 100}
+                  className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 border-2 border-[#93C7F3]/30 hover:border-[#93C7F3]/60 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-[#93C7F3]/20"
+                >
+                  {/* Decorative corner elements */}
+                  <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-[#93C7F3]/20 rounded-tl-2xl"></div>
+                  <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-[#93C7F3]/20 rounded-br-2xl"></div>
+                  
+                  <div className="relative w-36 h-36 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl ring-4 ring-[#93C7F3]/40 group-hover:ring-[#93C7F3]/70 transition-all duration-500 group-hover:shadow-[0_0_30px_rgba(147,199,243,0.5)]">
+                    <Image
+                      src={parent.image}
+                      alt={parent.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="144px"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        if (target.parentElement) {
+                          target.parentElement.style.background = 'linear-gradient(135deg, #93C7F3 0%, #1f4261 100%)';
+                        }
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    {/* Shine effect */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  </div>
+                  <h4 className="text-xl md:text-2xl font-bold text-white text-center mb-2 group-hover:text-[#93C7F3] transition-colors duration-300">{parent.name}</h4>
+                  <p className="text-[#93C7F3] text-center font-semibold text-lg">{parent.relation}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Siblings Section */}
+          <div className="mb-20">
+            <h3
+              data-aos="fade-up"
+              className="text-2xl md:text-3xl font-semibold text-[#93C7F3] mb-10 text-center flex items-center justify-center"
+            >
+              <span className="mr-3 text-3xl">👨‍👧‍👦</span>
+              Frères et Sœurs
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {/* Sisters */}
+              {familyMembers.sisters.map((sibling, i) => (
+                <div
+                  key={`sister-${i}`}
+                  data-aos="zoom-in"
+                  data-aos-delay={i * 100}
+                  className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl p-5 border-2 border-[#93C7F3]/20 hover:border-[#93C7F3]/50 transition-all duration-500 hover:scale-110 hover:shadow-xl hover:shadow-[#93C7F3]/20"
+                >
+                  <div className="relative w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden shadow-xl ring-2 ring-[#93C7F3]/40 group-hover:ring-[#93C7F3]/70 transition-all duration-500">
+                    <Image
+                      src={sibling.image}
+                      alt={sibling.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="112px"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        if (target.parentElement) {
+                          target.parentElement.style.background = 'linear-gradient(135deg, #93C7F3 0%, #1f4261 100%)';
+                        }
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  </div>
+                  <h4 className="text-sm md:text-base font-bold text-white text-center mb-1 group-hover:text-[#93C7F3] transition-colors duration-300">{sibling.name}</h4>
+                  <p className="text-[#93C7F3] text-xs md:text-sm text-center font-semibold">{sibling.relation}</p>
+                </div>
+              ))}
+
+              {/* Brothers */}
+              {familyMembers.brothers.map((sibling, i) => (
+                <div
+                  key={`brother-${i}`}
+                  data-aos="zoom-in"
+                  data-aos-delay={(i + familyMembers.sisters.length) * 100}
+                  className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl p-5 border-2 border-[#93C7F3]/20 hover:border-[#93C7F3]/50 transition-all duration-500 hover:scale-110 hover:shadow-xl hover:shadow-[#93C7F3]/20"
+                >
+                  <div className="relative w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden shadow-xl ring-2 ring-[#93C7F3]/40 group-hover:ring-[#93C7F3]/70 transition-all duration-500">
+                    <Image
+                      src={sibling.image}
+                      alt={sibling.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="112px"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        if (target.parentElement) {
+                          target.parentElement.style.background = 'linear-gradient(135deg, #93C7F3 0%, #1f4261 100%)';
+                        }
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  </div>
+                  <h4 className="text-sm md:text-base font-bold text-white text-center mb-1 group-hover:text-[#93C7F3] transition-colors duration-300">{sibling.name}</h4>
+                  <p className="text-[#93C7F3] text-xs md:text-sm text-center font-semibold">{sibling.relation}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Friends Section */}
+          <div className="mb-20">
+            <h3
+              data-aos="fade-up"
+              className="text-2xl md:text-3xl font-semibold text-[#93C7F3] mb-10 text-center flex items-center justify-center"
+            >
+              <span className="mr-3 text-3xl">👫</span>
+              Amis Proches
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-6">
+              {familyMembers.friends.map((friend, i) => (
+                <div
+                  key={`friend-${i}`}
+                  data-aos="zoom-in"
+                  data-aos-delay={i * 80}
+                  className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl p-5 border-2 border-[#93C7F3]/20 hover:border-[#93C7F3]/50 transition-all duration-500 hover:scale-110 hover:shadow-xl hover:shadow-[#93C7F3]/20"
+                >
+                  <div className="relative w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden shadow-xl ring-2 ring-[#93C7F3]/40 group-hover:ring-[#93C7F3]/70 transition-all duration-500">
+                    <Image
+                      src={friend.image}
+                      alt={friend.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="112px"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        if (target.parentElement) {
+                          target.parentElement.style.background = 'linear-gradient(135deg, #93C7F3 0%, #1f4261 100%)';
+                        }
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  </div>
+                  <h4 className="text-sm md:text-base font-bold text-white text-center mb-1 group-hover:text-[#93C7F3] transition-colors duration-300">{friend.name}</h4>
+                  <p className="text-[#93C7F3] text-xs md:text-sm text-center font-semibold">{friend.relation}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Others Section */}
+          <div className="mb-12">
+            <h3
+              data-aos="fade-up"
+              className="text-2xl md:text-3xl font-semibold text-[#93C7F3] mb-10 text-center flex items-center justify-center"
+            >
+              <span className="mr-3 text-3xl">💝</span>
+              Autres Proches
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {familyMembers.others.map((person, i) => (
+                <div
+                  key={`other-${i}`}
+                  data-aos="zoom-in"
+                  data-aos-delay={i * 100}
+                  className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-xl p-5 border-2 border-[#93C7F3]/20 hover:border-[#93C7F3]/50 transition-all duration-500 hover:scale-110 hover:shadow-xl hover:shadow-[#93C7F3]/20"
+                >
+                  <div className="relative w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden shadow-xl ring-2 ring-[#93C7F3]/40 group-hover:ring-[#93C7F3]/70 transition-all duration-500">
+                    <Image
+                      src={person.image}
+                      alt={person.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      sizes="112px"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        if (target.parentElement) {
+                          target.parentElement.style.background = 'linear-gradient(135deg, #93C7F3 0%, #1f4261 100%)';
+                        }
+                      }}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  </div>
+                  <h4 className="text-sm md:text-base font-bold text-white text-center mb-1 group-hover:text-[#93C7F3] transition-colors duration-300">{person.name}</h4>
+                  <p className="text-[#93C7F3] text-xs md:text-sm text-center font-semibold">{person.relation}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Note for adding images */}
+          <div
+            data-aos="fade-up"
+            className="mt-12 text-center"
+          >
+            <p className="text-gray-400 text-sm italic">
+              Les photos seront ajoutées prochainement
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Detailed Sections */}
       <section className="relative py-20 w-full bg-[url('/new/bg.png')] bg-cover bg-center px-4 md:px-10">
         <div className="absolute inset-0 bg-black/40"></div>
@@ -311,6 +649,101 @@ const AboutPage = () => {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Parcours Section (timeline) */}
+      <section className="relative py-20 w-full bg-[url('/new/bg.png')] bg-cover bg-center px-4 md:px-10">
+        <div className="absolute inset-0 bg-black/40"></div>
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div
+            data-aos="fade-down"
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Son <span className="text-[#93C7F3]">Parcours</span>
+            </h2>
+            <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+              Les étapes marquantes d&apos;Abigaël, de son enfance à sa danse éternelle.
+            </p>
+            <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#93C7F3] to-transparent mx-auto mt-6"></div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-[#93C7F3]/30 transform md:-translate-x-1/2"></div>
+
+            {[
+              {
+                year: "2009",
+                age: "Naissance",
+                title: "Bienvenue, Abigaël",
+                description: "Née le 22 février 2009 à Goma, rayonnante dès ses premiers jours.",
+                icon: "👶",
+              },
+              {
+                year: "2011-2012",
+                age: "Petite section",
+                title: "Premiers pas scolaires",
+                description: "Études maternelles au COMPLEXE SCOLAIRE LA JOIE.",
+                icon: "🎒",
+              },
+              {
+                year: "2013-2019",
+                age: "Enfance",
+                title: "Certificat primaire",
+                description: "Obtention du certificat d&apos;études primaires au COMPLEXE SCOLAIRE LA JOIE.",
+                icon: "📚",
+              },
+              {
+                year: "2020-2024",
+                age: "Adolescence",
+                title: "Secondaire & passion",
+                description: "Études au LYCEE SAINTE URSULE (industrie agricole) et passion pour la danse Gospel avec EJO.",
+                icon: "💃",
+              },
+              {
+                year: "2022",
+                age: "14 ans",
+                title: "Audace & leadership",
+                description: "Formation à la conduite et création de son entreprise Zoe.",
+                icon: "🚗",
+              },
+              {
+                year: "2024",
+                age: "15 ans",
+                title: "Héritage éternel",
+                description: "Rejoignant les cieux le 27 décembre 2024, elle continue d&apos;inspirer par sa joie et sa foi.",
+                icon: "✨",
+              },
+            ].map((milestone, i) => (
+              <div
+                key={i}
+                data-aos={i % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={i * 100}
+                className={`relative mb-12 flex items-center ${
+                  i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                }`}
+              >
+                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-[#93C7F3] rounded-full transform md:-translate-x-1/2 z-10 animate-pulse"></div>
+
+                <div
+                  className={`ml-16 md:ml-0 md:w-[45%] ${
+                    i % 2 === 0 ? "md:mr-auto md:pr-8" : "md:ml-auto md:pl-8"
+                  } bg-white/5 backdrop-blur-sm rounded-lg p-6 border border-[#93C7F3]/20 hover:border-[#93C7F3]/40 transition-all duration-500 hover:scale-105`}
+                >
+                  <div className="flex items-center mb-3">
+                    <span className="text-3xl mr-3">{milestone.icon}</span>
+                    <div>
+                      <span className="text-[#93C7F3] font-bold text-lg">{milestone.year}</span>
+                      <span className="text-gray-400 text-sm ml-2">({milestone.age})</span>
+                    </div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{milestone.title}</h3>
+                  <p className="text-gray-300 leading-relaxed">{milestone.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

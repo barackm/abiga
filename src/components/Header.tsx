@@ -22,8 +22,10 @@ export default function Navbar() {
           <li><Link href="/biography" className="hover:text-teal-400">Biography</Link></li>
           <li><Link href="/about" className="hover:text-teal-400">About</Link></li>
           <li><Link href="/family-moments" className="hover:text-teal-400">Family Moments</Link></li>
-          <li><Link href="/photos" className="hover:text-teal-400">Photos</Link></li>
+          <li><Link href="/ejo" className="hover:text-teal-400">EJO</Link></li>
           <li><Link href="/tributes" className="hover:text-teal-400">Tributes</Link></li>
+          <li><Link href="/funeral" className="hover:text-teal-400">Funeral</Link></li>
+          <li><Link href="/photos" className="hover:text-teal-400">Photos</Link></li>
         </ul>
 
         {/* Mobile Menu Button */}
@@ -41,8 +43,10 @@ export default function Navbar() {
           <li><Link href="/" onClick={() => setIsOpen(false)}>Home</Link></li>
           <li><Link href="/about" onClick={() => setIsOpen(false)}>About</Link></li>
           <li><Link href="/family-moments" onClick={() => setIsOpen(false)}>Family Moments</Link></li>
-          <li><Link href="/photos" onClick={() => setIsOpen(false)}>Photos</Link></li>
+          <li><Link href="/ejo" onClick={() => setIsOpen(false)}>EJO</Link></li>
           <li><Link href="/tributes" onClick={() => setIsOpen(false)}>Tributes</Link></li>
+          <li><Link href="/funeral" onClick={() => setIsOpen(false)}>Funeral</Link></li>
+          <li><Link href="/photos" onClick={() => setIsOpen(false)}>Photos</Link></li>
         </ul>
       )}
     </nav>
