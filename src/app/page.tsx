@@ -51,7 +51,7 @@ export default function HeroSection() {
 						âme repose en paix éternellement.
 					</p>
 					<div className='mt-10 flex items-center gap-4'>
-						<VideoModal videoUrl='/videos/zoe.mp4' />
+						<VideoModal videoUrl='https://www.youtube.com/shorts/U6Bm4YavHzE' />
 						<div>
 							<p className='text-sm uppercase text-gray-400'>Sa vision</p>
 							<p className='text-[#93C7F3] font-semibold'>PDG de ZOE</p>
